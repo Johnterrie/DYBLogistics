@@ -2,9 +2,9 @@ import Image from "next/image";
 function Hero() {
   return (
     <>
-      <section className="w-full flex justify-between">
+      <section className="w-full flex flex-col md:flex-row md:justify-between">
         {/* hero text */}
-        <div className="w-1/2 md:w-full flex flex-col gap-5">
+        <div className="md:w-1/2 w-full flex flex-col gap-5">
           <div className="flex flex-col gap-4">
             <Image
               alt="cta-text"
@@ -51,7 +51,7 @@ function Hero() {
           </div>
         </div>
         {/* hero-image */}
-        <div className="w-1/2 md:w-full">
+        <div className="md:w-1/2 w-full">
           <Image
             src="/images/hero.png"
             alt="hero"
