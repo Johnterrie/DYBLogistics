@@ -34,11 +34,13 @@
   --color-gray-dark: var(--gray-dark);
   --color-gray-light: var(--gray-light);
   --font-montreal: var(--montreal);
+  --breakpoint-xs: 370px;
+  --breakpoint-sm: 480px;
 }
 
 @layer utilities {
   .max-container {
-    @apply w-full max-w-[60rem] p-3 mx-auto;
+    @apply w-full max-w-[70rem] p-3 mx-auto;
   }
   .nav-link {
     @apply text-gray-dark capitalize opacity-[67%] text-sm hover:text-main duration-300 ease-in-out;

@@ -2,7 +2,7 @@ import Image from "next/image";
 function Hero() {
   return (
     <>
-      <section className="w-full flex flex-col md:flex-row md:justify-between">
+      <section className="w-full flex flex-col items-center gap-8 md:flex-row md:justify-between">
         {/* hero text */}
         <div className="md:w-1/2 w-full flex flex-col gap-5">
           <div className="flex flex-col gap-4">
@@ -11,28 +11,32 @@ function Hero() {
               src={"/images/cta-text.svg"}
               width={200}
               height={200}
-              className="object-cover"
+              className="object-cover mx-auto md:mx-0"
             />
             <div className="flex flex-col gap-2">
-              <h2 className="text-4xl font-bold font-montreal">
+              <h2 className="text-2xl text-center md:text-start md:text-4xl font-bold font-montreal">
                 Reliable Logistics, On-Time Every Time
               </h2>
-              <p className="text-gray-dark opacity-[65%]">
+              <p className="text-sm md:text-base text-center md:text-start text-gray-dark opacity-[65%]">
                 Seamless shipment delivery solutions for your business with on
                 time precision to keep you on track
               </p>
             </div>
-            <Image
-              alt="investors"
-              src={"/images/investors.svg"}
-              width={300}
-              height={300}
-              className="object-cover"
-            />
-
+            <div className="hidden md:flex flex-col gap-1">
+              <Image
+                alt="investors"
+                src={"/images/profiles.svg"}
+                width={150}
+                height={150}
+                className="object-cover"
+              />
+              <span className="text-gray-dark opacity-[65%]">
+                Join 5000+ customers to ship your package today
+              </span>
+            </div>
             <label
               htmlFor="bookings"
-              className="rounded-4xl border border-main flex items-center py-1 px-2 gap-3 justify-between"
+              className="md:max-w-3/4 rounded-4xl border border-main flex items-center py-1 px-2 gap-3 justify-between"
             >
               <input
                 type="text"
@@ -51,13 +55,48 @@ function Hero() {
           </div>
         </div>
         {/* hero-image */}
-        <div className="md:w-1/2 w-full">
+        <div className="relative md:w-1/2 w-full">
           <Image
-            src="/images/hero.png"
+            alt="herobox2"
+            src={"/images/herobox.svg"}
+            className="absolute left-[-25%] hidden lg:block"
+            width={225}
+            height={225}
+          />
+          <Image
+            alt="herobox2"
+            src={"/images/herobox.svg"}
+            className="absolute left-[-10%] lg:hidden"
+            width={200}
+            height={200}
+          />
+          <Image
+            src="/images/herobg.svg"
             alt="hero"
-            width={500}
-            height={500}
-            className="object-cover"
+            width={700}
+            height={700}
+            className="hidden md:block object-cover"
+          />
+          <Image
+            src="/images/herobg.svg"
+            alt="hero"
+            width={350}
+            height={350}
+            className="mx-auto md:hidden object-cover"
+          />
+          <Image
+            alt="herobox"
+            src={"/images/herobox2.svg"}
+            className="absolute right-[2.5%] bottom-[8%] hidden lg:block"
+            width={225}
+            height={225}
+          />
+          <Image
+            alt="herobox"
+            src={"/images/herobox2.svg"}
+            className="absolute right-[2.5%] bottom-[5%] lg:hidden"
+            width={200}
+            height={200}
           />
         </div>
       </section>

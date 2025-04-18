@@ -29,7 +29,7 @@ function Navbar() {
           </Link>
 
           {/* desktop nav */}
-          <div className="hidden w-3/4 md:flex flex-row items-center gap-16 ml-auto">
+          <div className="hidden w-3/4 lg:flex flex-row items-center gap-16 ml-auto">
             {/* links */}
             <div className="flex flex-row items-center gap-8">
               <Link href={"/shipping"} className="nav-link">
@@ -69,7 +69,7 @@ function Navbar() {
             </div>
           </div>
           {/* mobile nav */}
-          <div className="md:hidden relative ml-auto">
+          <div className="lg:hidden relative ml-auto">
             {/* menu */}
             <div className="cursor-pointer relative z-[10]">
               <Image
