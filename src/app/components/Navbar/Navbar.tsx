@@ -50,7 +50,7 @@ function Navbar() {
             <div className="flex flex-row items-center gap-6">
               <Link
                 className="text-sm text-gray-dark font-semibold"
-                href={"/login"}
+                href={"/customer/dashboard"}
               >
                 Log in
               </Link>
