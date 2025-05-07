@@ -10,7 +10,7 @@ function Nav() {
 
   return (
     <>
-      <nav className="sticky top-0 left-0 md:static w-full md:border-b border-gray-shade/40 p-3 lg:py-5 lg:px-8 flex flex-col gap-3">
+      <nav className="relative md:static w-full md:border-b border-gray-shade/40 p-3 lg:py-5 lg:px-8 flex flex-col gap-3 overflow-x-hidden">
         <div className="flex items-center justify-between">
           <Link href={"/customer/dashboard"}>
             <Image
@@ -58,7 +58,7 @@ function Nav() {
               }}
               className={`${
                 isNavOpen ? "right-0 opacity-100" : "right-[-100%] opacity-0"
-              } absolute top-0 bg-gray-light text-secondary min-w-fit py-10 px-5 h-screen flex flex-col gap-5 duration-200 ease-in-out`}
+              } fixed top-0 bg-gray-light text-secondary min-w-fit py-10 px-5 h-screen flex flex-col gap-5 duration-200 ease-in-out`}
             >
               <div
                 onClick={() => setIsNavOpen(false)}

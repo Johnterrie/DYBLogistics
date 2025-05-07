@@ -45,7 +45,7 @@ function Faq() {
           <Image
             alt="faq"
             src={"/images/faq.svg"}
-            width={500}
+            width={600}
             height={300}
             className="w-full h-[500px]"
           />

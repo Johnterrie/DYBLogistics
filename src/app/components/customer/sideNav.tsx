@@ -4,9 +4,9 @@ import { CiLogout } from "react-icons/ci";
 function SideNav() {
   return (
     <>
-      <nav className="hidden md:block min-w-fit max-w-[30%] p-3 border border-gray-shade/40">
+      <nav className="hidden md:block min-w-fit w-full max-w-[22%] p-3 border border-gray-shade/40">
         <div
-          className={`text-secondary min-w-fit py-10 px-5 h-screen flex flex-col gap-5 duration-200 ease-in-out`}
+          className={`text-secondary w-full py-5 px-5 h-screen flex flex-col gap-5 duration-200 ease-in-out`}
         >
           <NavLink
             href="/customer/dashboard"

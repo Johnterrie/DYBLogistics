@@ -22,12 +22,12 @@ export default function CustomerLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
-        <main className="fixed top-0 left-0 z-[1000] bg-white w-screen h-screen">
+      <body className={`${inter.className} antialiased md:overflow-hidden`}>
+        <main className="absolute inset-0 md:fixed z-[10000] md:flex md:flex-col bg-white md:h-screen">
           <Nav />
-          <div className="flex">
+          <div className="flex flex-1 md:overflow-hidden">
             <SideNav />
-            {children}
+            <div className="flex-1 md:overflow-hidden">{children}</div>
           </div>
         </main>
       </body>
