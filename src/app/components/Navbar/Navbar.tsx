@@ -85,12 +85,18 @@ function Navbar() {
             <div className="">
               {/* blur-background */}
               <div
+                onClick={() => setNavOpen(false)}
                 className={`${
-                  isNavOpen ? "fixed z-[50]" : "hidden"
+                  isNavOpen ? "fixed z-[50] opacity-100" : "hidden opacity-0"
                 } duration-300 ease-in-out top-0 left-0 bg-gray-dark opacity-40 h-screen w-screen`}
               />
               {/* nav-links */}
               <div
+                onClick={() => {
+                  setTimeout(() => {
+                    setNavOpen(false);
+                  }, 500);
+                }}
                 className={`absolute ${
                   isNavOpen
                     ? "right-[-20px] opacity-100 z-[50]"
