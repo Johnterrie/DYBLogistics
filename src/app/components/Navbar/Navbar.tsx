@@ -86,8 +86,8 @@ function Navbar() {
               {/* blur-background */}
               <div
                 className={`${
-                  isNavOpen ? "block z-[50]" : "hidden"
-                } duration-300 ease-in-out fixed top-0 left-0 bg-gray-dark opacity-40 h-screen w-screen`}
+                  isNavOpen ? "fixed z-[50]" : "hidden"
+                } duration-300 ease-in-out top-0 left-0 bg-gray-dark opacity-40 h-screen w-screen`}
               />
               {/* nav-links */}
               <div
