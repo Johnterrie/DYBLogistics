@@ -46,7 +46,7 @@ function Nav() {
               onClick={() => setIsNavOpen(false)}
               className={`${
                 isNavOpen ? "fixed" : "hidden"
-              } fixed top-0 left-0 bg-black/50 w-screen h-screen duration-200 ease-in-out`}
+              } z-50 top-0 left-0 bg-black/50 w-screen h-screen duration-200 ease-in-out`}
             />
 
             {/* menu */}
@@ -58,7 +58,7 @@ function Nav() {
               }}
               className={`${
                 isNavOpen ? "right-0 opacity-100" : "right-[-100%] opacity-0"
-              } fixed top-0 bg-gray-light text-secondary min-w-fit py-10 px-5 h-screen flex flex-col gap-5 duration-200 ease-in-out`}
+              } fixed z-50 top-0 bg-gray-light text-secondary min-w-fit py-10 px-5 h-screen flex flex-col gap-5 duration-200 ease-in-out`}
             >
               <div
                 onClick={() => setIsNavOpen(false)}
