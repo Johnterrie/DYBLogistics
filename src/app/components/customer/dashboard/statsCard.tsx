@@ -33,7 +33,7 @@ function StatsCard({ status = "total", value }: statProps) {
   }
   return (
     <>
-      <div className="p-5 w-full md:max-w-[250px] border border-gray-shade/40 flex flex-col justify-center gap-5 shadow-xs">
+      <div className="p-5 w-full lg:max-w-[250px] border border-gray-shade/40 flex flex-col justify-center gap-5 shadow-xs">
         <div className="w-full flex items-center justify-between">
           <h2>{getStatusText(status)}</h2>
 

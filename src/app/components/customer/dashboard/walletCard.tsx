@@ -7,7 +7,7 @@ interface WalletProps {
 function WalletCard({ balance }: WalletProps) {
   return (
     <>
-      <div className="bg-gradient-to-r from-gray-dark/90 to-foreground flex flex-col gap-5 rounded-3xl p-5 text-white w-full md:max-w-[350px]">
+      <div className="bg-gradient-to-r from-gray-dark/90 to-foreground flex flex-col gap-5 rounded-3xl p-5 text-white w-full lg:max-w-[350px]">
         <h3 className="flex items-center gap-2 font-bold text-lg">
           <Image
             alt="mini-wallet-icon"
@@ -18,7 +18,7 @@ function WalletCard({ balance }: WalletProps) {
           Wallet Balance
         </h3>
 
-        <p className="font-bold text-xl">N {balance.toFixed(2)}</p>
+        <p className="font-bold text-xl">₦ {balance.toFixed(2)}</p>
 
         <div className="w-full flex">
           <Link href={"/customer/wallet"} className="ml-auto self-end">

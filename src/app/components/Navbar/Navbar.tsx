@@ -87,8 +87,8 @@ function Navbar() {
               <div
                 onClick={() => setNavOpen(false)}
                 className={`${
-                  isNavOpen ? "fixed z-[50] opacity-100" : "hidden opacity-0"
-                } duration-300 ease-in-out top-0 left-0 bg-gray-dark opacity-40 h-screen w-screen`}
+                  isNavOpen ? "fixed z-[50] opacity-40" : "hidden opacity-0"
+                } duration-300 ease-in-out top-0 left-0 bg-gray-dark h-screen w-screen`}
               />
               {/* nav-links */}
               <div
