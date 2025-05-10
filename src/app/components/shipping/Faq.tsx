@@ -38,9 +38,11 @@ export const Faq = () => {
     <ul>
       {faqs.map((faq, index) => (
         <li key={faq.question}>
-          <div>
-            <div>
-              <p>{faq.question}</p>
+          <div className="w-[100%] flex ">
+            <div className="w-[100%] h-[51px] md:h-[60px] flex justify-between flex-row items-center bg-[#F5F5F5] rounded-[10px] px-6">
+              <p className="md:font-medium font-bold text-[12px] md:text-2xl">
+                {faq.question}
+              </p>
               <button onClick={() => handleFaqAnswer(index)}>
                 {activeIdex === index ? (
                   <Image src={downArrow} alt="arrow pointing downward" />
@@ -49,7 +51,14 @@ export const Faq = () => {
                 )}
               </button>
             </div>
-            {activeIdex === index && <p>{faq.answer}</p>}
+          </div>
+
+          <div className="px-[17px] ">
+            {activeIdex === index && (
+              <p className="py-5 font-medium text-[12px] md:text-[16px] text-[#22222299]">
+                {faq.answer}
+              </p>
+            )}
           </div>
         </li>
       ))}
