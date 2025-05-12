@@ -1,18 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
-import shipping from "../../../public/images/shipping.svg";
-import destination from "../../../public/icons/destination-select-icon.svg";
-import expressVan from "../../../public/icons/express-van-icon.svg";
-import domesticRun from "../../../public/icons/domestic-run-icon.svg";
-import searchIcon from "../../../public/icons/search-icon.svg";
-import airFreight from "../../../public/icons/air-freight-icon.svg";
-import seaFreight from "../../../public/icons/sea-freight-icon.svg";
-import roadFreight from "../../../public/icons/road-freight-icon.svg";
-import arrowDown from "../../../public/icons/arrow-down-grey.svg";
-
-import { Faq } from "@/app/components/shipping/Faq";
+import destination from "../../../../public/icons/destination-select-icon.svg";
+import expressVan from "../../../../public/icons/express-van-icon.svg";
+import domesticRun from "../../../../public/icons/domestic-run-icon.svg";
+import searchIcon from "../../../../public/icons/search-icon.svg";
+import airFreight from "../../../../public/icons/air-freight-icon.svg";
+import seaFreight from "../../../../public/icons/sea-freight-icon.svg";
+import roadFreight from "../../../../public/icons/road-freight-icon.svg";
+import arrowDown from "../../../../public/icons/arrow-down-grey.svg";
+import Faq from "@/app/components/index/faq";
 import { StateSelector } from "@/app/components/shipping/StateSelector";
 
 const navLinks = [
@@ -23,14 +20,14 @@ const navLinks = [
 
 const ShippingPage = () => {
   return (
-    <div className="px-[22px]">
+    <div className="max-container">
       <div className="flex w-full justify-center">
         <h3 className="text-center font-bold text-[20px] md:text-[45px] my-[35px] w-[90%] sm:w-[65%]">
           Choose Your Preferred Shipping Option By Cost
         </h3>
       </div>
 
-      <section className=" px-[22px] sm:px-[68px] md:py-[52px] flex flex-col md:flex-row">
+      <section className="md:py-[52px] flex flex-col md:flex-row">
         <div>
           <h4 className="text-left font-bold text-[14px] sm:text-[24px] mb-[8px] ">
             Domestic Shipping
@@ -151,24 +148,8 @@ const ShippingPage = () => {
         </div>
       </section>
 
-      <section className="flex md:p-[74px] gap-16">
-        <div className="hidden md:block ">
-          <Image
-            src={shipping}
-            alt="Shipping illustration"
-            className="object-cover object-center h-[100%]"
-            quality={100}
-          />
-        </div>
-        <div className="w-full py-[21px] md:py-0">
-          <h3 className="text-center md:text-[45px] md:text-left font-bold ">
-            Frequently Asked Questions
-          </h3>
-          <p className="text-center md:text-left font-normal md:font-medium md:text-2xl text-[12px] text-[#22222299]">
-            Have questions? We’re here to help
-          </p>
-          <Faq />
-        </div>
+      <section className="md:py-[74px]">
+        <Faq />
       </section>
     </div>
   );
