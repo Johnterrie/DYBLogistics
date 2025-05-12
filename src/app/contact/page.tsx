@@ -20,7 +20,7 @@ const contactDetails = [
 
 const Contact = () => {
   return (
-    <div className="px-[22px]">
+    <div className="px-[28px] md:px-[146px]">
       <h3 className="text-center font-bold text-[20px] md:text-[45px] leading-6 md:mt-[40px]">
         Support Center
       </h3>

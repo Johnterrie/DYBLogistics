@@ -35,45 +35,76 @@ const ContactUsForm = () => {
         Have a question for us? Let us know & we will respond within 24 hours
       </h4>
       <div className="flex flex-col gap-8">
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-col gap-8 md:flex-row justify-between">
+          <div className="w-[100%]">
+            <label
+              className="block md:hidden font-normal text-[10px] leading-[100%] mb-[7px]"
+              htmlFor=""
+            >
+              First name
+            </label>
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First Name"
+              value={formData.firstName}
+              onChange={handleChange}
+              className=" px-2.5 placeholder:invisible md:placeholder:visible w-[100%] outline-none focus:border-[2px] focus:border-[#FD4A09] h-10 md:h-14 md:p-4 bg-[#FFFFFF] border-[1px] rounded-[10px] border-[#CCCCCCCC]"
+            />
+          </div>
+          <div className="w-[100%]">
+            <label
+              className="block md:hidden font-normal text-[10px] leading-[100%] mb-[7px]"
+              htmlFor=""
+            >
+              Last name
+            </label>
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              value={formData.lastName}
+              onChange={handleChange}
+              className="px-2.5 placeholder:invisible md:placeholder:visible w-[100%] outline-none focus:border-[2px] focus:border-[#FD4A09] h-10 md:h-14 md:p-4 bg-[#FFFFFF] border-[1px] rounded-[10px] border-[#CCCCCCCC]"
+            />
+          </div>
+        </div>
+
+        <div className="w-[100%]">
+          <label
+            className="block md:hidden font-normal text-[10px] leading-[100%] mb-[7px]"
+            htmlFor=""
+          >
+            Email
+          </label>
           <input
-            type="text"
-            name="firstName"
-            placeholder="First Name"
-            value={formData.firstName}
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
             onChange={handleChange}
-            className="h-10 md:h-14 md:p-4 bg-[#FFFFFF] border-[1px] rounded-[10px] border-[#CCCCCCCC]"
+            className="px-2.5 placeholder:invisible md:placeholder:visible w-[100%] outline-none focus:border-[2px] focus:border-[#FD4A09] h-10 md:h-14 md:p-4 bg-[#FFFFFF] border-[1px] rounded-[10px] border-[#CCCCCCCC]"
           />
+        </div>
+        <div className="w-[100%]">
+          <label
+            className="block md:hidden font-normal text-[10px] leading-[100%] mb-[7px]"
+            htmlFor=""
+          >
+            Phone number
+          </label>
           <input
-            type="text"
-            name="lastName"
-            placeholder="Last Name"
-            value={formData.lastName}
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            value={formData.phone}
             onChange={handleChange}
-            className="h-10 md:h-14 md:p-4 bg-[#FFFFFF] border-[1px] rounded-[10px] border-[#CCCCCCCC]"
+            className="px-2.5 placeholder:invisible md:placeholder:visible w-[100%] outline-none focus:border-[2px] focus:border-[#FD4A09] h-10 md:h-14 md:p-4 bg-[#FFFFFF] border-[1px] rounded-[10px] border-[#CCCCCCCC]"
           />
         </div>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          className="h-10 md:h-14 md:p-4 bg-[#FFFFFF] border-[1px] rounded-[10px] border-[#CCCCCCCC]"
-        />
-
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Phone Number"
-          value={formData.phone}
-          onChange={handleChange}
-          className="h-10 md:h-14 md:p-4 bg-[#FFFFFF] border-[1px] rounded-[10px] border-[#CCCCCCCC]"
-        />
-
         <select
-          className="h-10 md:h-14 md:p-4 bg-[#EEEEEE] border-[1px] rounded-[10px] border-[#CCCCCCCC]"
+          className="outline-none focus:border-[2px] focus:border-[#FD4A09] h-10 md:h-14 md:p-4 bg-[#EEEEEE] border-[1px] rounded-[10px] border-[#CCCCCCCC]"
           name="reason"
           value={formData.reason}
           onChange={handleChange}
@@ -89,7 +120,7 @@ const ContactUsForm = () => {
           placeholder="Message"
           value={formData.message}
           onChange={handleChange}
-          className="h-2 md:h-20 md:p-4 bg-[#FFFFFF] border-[1px] rounded-[10px] border-[#CCCCCCCC]"
+          className="px-2.5 placeholder:invisible md:placeholder:visible outline-none focus:border-[2px] focus:border-[#FD4A09] h-[64px] md:h-20 md:p-4 bg-[#FFFFFF] border-[1px] rounded-[10px] border-[#CCCCCCCC]"
         />
       </div>
 
@@ -98,12 +129,14 @@ const ContactUsForm = () => {
         <input type="checkbox" required /> I'm not a robot
       </div>
 
-      <button
-        className="w-[100%] h-[67px] rounded-4xl bg-[#FD4A09] font-medium text-[20px] text-[#FFFFFF] mt-14 "
-        type="submit"
-      >
-        Send Message
-      </button>
+      <div className=" w-[100%] flex justify-center items-center ">
+        <button
+          className="w-[80%] md:w-[100%] h-[67px] rounded-4xl bg-[#FD4A09] font-medium text-[20px] text-[#FFFFFF] mt-14 "
+          type="submit"
+        >
+          Send Message
+        </button>
+      </div>
     </form>
   );
 };
