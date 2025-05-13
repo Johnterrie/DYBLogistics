@@ -4,7 +4,7 @@ import { useState } from "react";
 function Faq() {
   const faq = [
     {
-      question: "What services do you offer?",
+      question: "What services do you offer?", 
       answer:
         "We provide a wide range of logistics solutions, including domestic and international shipping",
     },
