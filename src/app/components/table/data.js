@@ -1,0 +1,118 @@
+const statusList = ["Pending", "In-Transit", "Delivered", "Canceled"];
+
+export const header = [
+  "Shipment ID",
+  "Sender",
+  "Receiver",
+  "Shipper Date",
+  "Destination",
+  "Company",
+  "Status",
+  "Action",
+];
+
+const getRandomStatus = () => {
+  return statusList[Math.floor(Math.random() * statusList.length)];
+};
+
+export const shipments = [
+  {
+    id: "#JT-123-3001",
+    sender: "Mercury Paul",
+    receiver: "Daniel Fatoyinbo",
+    shipperDate: "06/02/2025",
+    destination: "Oslo",
+    company: "XYZ Logistics",
+    status: getRandomStatus(),
+  },
+  {
+    id: "#JT-123-3002",
+    sender: "Mercury Paul",
+    receiver: "Daniel Fatoyinbo",
+    shipperDate: "06/02/2025",
+    destination: "Lagos",
+    company: "ABC Shipping",
+    status: getRandomStatus(),
+  },
+  {
+    id: "#JT-123-3003",
+    sender: "Mercury Paul",
+    receiver: "Daniel Fatoyinbo",
+    shipperDate: "06/02/2025",
+    destination: "Texas",
+    company: "ABC Shipping",
+    status: getRandomStatus(),
+  },
+  {
+    id: "#JT-123-3004",
+    sender: "Mercury Paul",
+    receiver: "Daniel Fatoyinbo",
+    shipperDate: "06/02/2025",
+    destination: "Morocco",
+    company: "FastTrack Express",
+    status: getRandomStatus(),
+  },
+  {
+    id: "#JT-123-3005",
+    sender: "Mercury Paul",
+    receiver: "Daniel Fatoyinbo",
+    shipperDate: "06/02/2025",
+    destination: "Spain",
+    company: "FastTrack Express",
+    status: getRandomStatus(),
+  },
+  {
+    id: "#JT-123-3006",
+    sender: "Mercury Paul",
+    receiver: "Daniel Fatoyinbo",
+    shipperDate: "06/02/2025",
+    destination: "Brazil",
+    company: "XYZ Logistics",
+    status: getRandomStatus(),
+  },
+  {
+    id: "#JT-123-3007",
+    sender: "Mercury Paul",
+    receiver: "Daniel Fatoyinbo",
+    shipperDate: "06/02/2025",
+    destination: "India",
+    company: "XYZ Logistics",
+    status: getRandomStatus(),
+  },
+  {
+    id: "#JT-123-3008",
+    sender: "Mercury Paul",
+    receiver: "Daniel Fatoyinbo",
+    shipperDate: "06/02/2025",
+    destination: "Russia",
+    company: "XYZ Logistics",
+    status: getRandomStatus(),
+  },
+  {
+    id: "#JT-123-3009",
+    sender: "Mercury Paul",
+    receiver: "Daniel Fatoyinbo",
+    shipperDate: "06/02/2025",
+    destination: "Canada",
+    company: "FastTrack Express",
+    status: getRandomStatus(),
+  },
+  {
+    id: "#JT-123-3010",
+    sender: "Mercury Paul",
+    receiver: "Daniel Fatoyinbo",
+    shipperDate: "06/02/2025",
+    destination: "South Africa",
+    company: "FastTrack Express",
+    status: getRandomStatus(),
+  },
+  {
+    id: "#JT-123-3011",
+    sender: "Mercury Paul",
+    receiver: "Daniel Fatoyinbo",
+    shipperDate: "06/02/2025",
+    destination: "China",
+    company: "FastTrack Express",
+    status: getRandomStatus(),
+  },
+];

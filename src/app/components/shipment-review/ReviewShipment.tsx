@@ -37,7 +37,6 @@ export default function ReviewShipment() {
   const [data, setData] = useState<ShipmentData | null>(null);
 
   useEffect(() => {
-    // Simulate API call
     const dummyData: ShipmentData = {
       sender: {
         name: "Charles Oka",
@@ -207,7 +206,7 @@ export default function ReviewShipment() {
         <button className="font-bold text-[12px] md:text-[20px] md:border-[0.5px] md:border-[#22222299] p-3 w-full md:w-[145px] md:h-[60px] bg-[#FD4A0980] rounded-[40px]">
           Previous
         </button>
-        <button className="font-bold text-[12px] text-[#FFFFFF] md:text-[20px] md:border-[0.5px] md:border-[#22222299] p-3 w-full md:w-[225px] md:h-[60px] bg-[#FD4A09] rounded-[40px]">
+        <button className="font-bold text-[12px] text-[#FFFFFF] md:text-[20px] md:border-[0.5px]  p-3 w-full md:w-[225px] md:h-[60px] bg-[#FD4A09] rounded-[40px]">
           Make payment
         </button>
       </div>
