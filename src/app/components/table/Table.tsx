@@ -178,41 +178,43 @@ const Table: React.FC<TableProps> = ({
         )}
       </table>
 
-      <div>
-        <p>
-          Showing {indexOfFirstItem + 1} to{" "}
-          {Math.min(indexOfLastItem, data?.length)} of {data?.length} entries
+      <div className="flex flex-row justify-between items-center mt-[56px]">
+        <p className="font-normal text-[13px] text-[#A3A2AB] leading-[150%] ">
+          Showing Result {indexOfFirstItem + 1} to{" "}
+          {Math.min(indexOfLastItem, data?.length)}
         </p>
-        <div>
-          <button
+        <div className="flex flex-row gap-[4px] ">
+          {/* <button
             onClick={() => handlePageChange(1)}
             disabled={currentPage === 1}
           >
             &lt;&lt;
-          </button>
+          </button> */}
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
+            className=" w-[35px] h-[35px] hover:outline-[#FD4A09] rounded-[4px] text-[#BDBDBD] hover:text-[#FD4A09] outline-[0.5px] outline-[#BDBDBD]"
           >
             &lt;
           </button>
-          {Array.from({ length: totalPages }, (_, index) => (
+          {/* {Array.from({ length: totalPages }, (_, index) => (
             <button key={index} onClick={() => handlePageChange(index + 1)}>
               {index + 1}
             </button>
-          ))}
+          ))} */}
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
+            className=" w-[35px] h-[35px] hover:outline-[#FD4A09] rounded-[4px] text-[#BDBDBD] hover:text-[#FD4A09] outline-[0.5px] outline-[#BDBDBD]"
           >
             &gt;
           </button>
-          <button
+          {/* <button
             onClick={() => handlePageChange(totalPages)}
             disabled={currentPage === totalPages}
           >
             &gt;&gt;
-          </button>
+          </button> */}
         </div>
       </div>
     </>

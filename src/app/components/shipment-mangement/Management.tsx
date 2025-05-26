@@ -63,51 +63,55 @@ const Management: React.FC = () => {
   }
   return (
     <>
-      <DashboardStats />
-      <div className="flex flex-row justify-between items-center">
-        <ul className="flex flex-row justify-start items-center gap-2 text-[#BDBDBD]">
-          {shipmentStatus.map((status) => (
-            <li
-              onClick={() => setFilterStatus(status)}
-              className={`font-normal text-[13px] ${filterStatus === status ? "text-[#FD4A09] underline underline-offset-3" : ""}`}
-              key={status}
-            >
-              {status}
-            </li>
-          ))}
-        </ul>
-        <div className="flex flex-row gap-4">
-          <div className="flex flex-row justify-start border-[0.5px] px-2 gap-1.5 border-[#BDBDBD] rounded-[4px] focus-within:border-[1px] focus-within:border-[#FD4A09]">
-            <Image src={searchIcon} alt="search" />
-            <input
-              type="text"
-              placeholder="Search something here"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="outline-none h-[35px]  "
-            />
-          </div>
-          <div className="flex flex-row items-center border-[0.5px] px-2 gap-1.5 border-[#BDBDBD] rounded-[4px] focus-within:border-[1px] focus-within:border-[#FD4A09]">
-            <Image src={filterIcon} alt="filter element" />
-            <span className="font-medium text-[16px] text-[#BDBDBD]">
-              Filter
-            </span>
+      <h3 className="font-semibold text-2xl text-[#7C7C7C] mb-6 leading-[100%]">
+        Shipment Management
+      </h3>
+      <div className="border-[0.5px] border-[#BDBDBD] px-4 py-6 rounded-[4px] mb-30">
+        <div className="flex flex-row justify-between items-center ">
+          <ul className="flex flex-row justify-start items-center gap-2 text-[#BDBDBD]">
+            {shipmentStatus.map((status) => (
+              <li
+                onClick={() => setFilterStatus(status)}
+                className={`font-normal text-[13px] ${filterStatus === status ? "text-[#FD4A09] underline underline-offset-3" : ""}`}
+                key={status}
+              >
+                {status}
+              </li>
+            ))}
+          </ul>
+          <div className="flex flex-row gap-4">
+            <div className="flex flex-row justify-start border-[0.5px] px-2 gap-1.5 border-[#BDBDBD] rounded-[4px] focus-within:border-[1px] focus-within:border-[#FD4A09]">
+              <Image src={searchIcon} alt="search" />
+              <input
+                type="text"
+                placeholder="Search something here"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="outline-none h-[35px]  "
+              />
+            </div>
+            <div className="flex flex-row items-center border-[0.5px] px-2 gap-1.5 border-[#BDBDBD] rounded-[4px] focus-within:border-[1px] focus-within:border-[#FD4A09]">
+              <Image src={filterIcon} alt="filter element" />
+              <span className="font-medium text-[16px] text-[#BDBDBD]">
+                Filter
+              </span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <Table
-        error={false}
-        onDelete={handleDelete}
-        onEdit={handleEdit}
-        onView={handleView}
-        isLoading={false}
-        renderRow={renderRow}
-        itemsPerPage={5}
-        data={filteredData}
-        headers={header}
-        getId={(item) => item.id}
-      />
+        <Table
+          error={false}
+          onDelete={handleDelete}
+          onEdit={handleEdit}
+          onView={handleView}
+          isLoading={false}
+          renderRow={renderRow}
+          itemsPerPage={5}
+          data={filteredData}
+          headers={header}
+          getId={(item) => item.id}
+        />
+      </div>
     </>
   );
 };

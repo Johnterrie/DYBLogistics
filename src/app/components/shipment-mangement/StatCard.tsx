@@ -17,11 +17,11 @@ const StatCard: FC<StatCardProps> = ({
   growth,
 }) => {
   return (
-    <div className="flex flex-col justify-between p-4 rounded-xl shadow border w-full bg-white">
+    <div className="flex flex-col justify-between p-4 rounded-[4px] border border-[#BDBDBD] w-full bg-white shadow-[0px_9px_40px_0px_#0000001B]">
       <div className="flex justify-between items-start mb-2">
         <div>
-          <h3 className="text-sm text-gray-500">{title}</h3>
-          <p className="text-xl font-semibold text-gray-800">{value}</p>
+          <h3 className="text-sm text-[#333333]">{title}</h3>
+          <p className="text-[18px] font-semibold text-[#333333]">{value}</p>
           {subLabel && <p className="text-xs text-gray-400">{subLabel}</p>}
         </div>
         {Icon && <Icon className="w-6 h-6 text-gray-400" />}
