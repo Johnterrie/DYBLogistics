@@ -1,4 +1,4 @@
-import Management from "@/app/components/shipment-mangement/Management";
+import Management from "@/app/components/super-admin/shipment-mangement/Management";
 import React from "react";
 
 const ShipmentManagement = () => {

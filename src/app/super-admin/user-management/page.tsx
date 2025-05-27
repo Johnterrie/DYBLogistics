@@ -1,7 +1,7 @@
 import React from "react";
-import UserManagementStats from "../../components/user-management/UserManagementStats";
+import UserManagementStats from "../../components/super-admin/user-management/UserManagementStats";
 
-const UserManagement = () => {
+const UserManagementPage = () => {
   return (
     <>
       <UserManagementStats />
@@ -9,4 +9,4 @@ const UserManagement = () => {
   );
 };
 
-export default UserManagement;
+export default UserManagementPage;

@@ -1,7 +1,12 @@
+import CompanyManagement from "@/app/components/super-admin/CompanyManagement";
 import React from "react";
 
-const CompanyManagement = () => {
-  return <div>company management page</div>;
+const CompanyManagementPage = () => {
+  return (
+    <>
+      <CompanyManagement />
+    </>
+  );
 };
 
-export default CompanyManagement;
+export default CompanyManagementPage;

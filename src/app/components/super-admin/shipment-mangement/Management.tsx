@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import Table, { TableItem } from "../table/Table";
+import Table, { TableItem } from "../../table/Table";
 
-import { header, shipments } from "../table/data";
+import { header, shipments } from "../../table/data";
 
-import searchIcon from "../../../../public/icons/search-icon.svg";
-import filterIcon from "../../../../public/icons/filter-icon.svg";
+import searchIcon from "../../../../../public/icons/search-icon.svg";
+import filterIcon from "../../../../../public/icons/filter-icon.svg";
 import Image from "next/image";
 import DashboardStats from "./DashBoardStat";
 
