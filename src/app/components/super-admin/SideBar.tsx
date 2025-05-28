@@ -55,7 +55,7 @@ const Sidebar: React.FC = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex flex-col justify-between items-start w-64 bg-white h-screen border-r px-4 py-6">
+    <div className="flex flex-col justify-between items-start w-64 bg-white h-screen border-r-[#BDBDBD] border-b-[#BDBDBD] border-t-[#BDBDBD] px-4 py-6">
       <div className="mb-10">
         <ul className="space-y-4">
           {navItems.map((item, idx) => {
