@@ -36,7 +36,7 @@ const Sender = () => {
   const handleClear = () => setSearch('');
 
   return (
-    <div className="bg-white py-12 px-4 sm:px-6 lg:px-8 min-h-screen">
+    <div className="bg-white py-12 px-4 sm:px-6 lg:px-50 min-h-screen">
       <div className="max-w-4xl mx-auto">
         
         {/* Headline and Description */}

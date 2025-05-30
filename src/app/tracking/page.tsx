@@ -6,7 +6,7 @@ const TrackingPage = () => {
 
   
   return (
-    <div>
+    <div className='lg:px-50'>
       <Shipping />
 
 
