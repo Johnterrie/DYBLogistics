@@ -23,6 +23,7 @@
   --secondary: #161616;
   --gray-dark: #222222;
   --gray-light: #f5f5f5;
+  --gray-shade: #7c7c7c;
   --montreal: "Neue Montreal", sans-serif;
 }
 
@@ -33,6 +34,7 @@
   --color-secondary: var(--secondary);
   --color-gray-dark: var(--gray-dark);
   --color-gray-light: var(--gray-light);
+  --color-gray-shade: var(--gray-shade);
   --font-montreal: var(--montreal);
   --breakpoint-xs: 370px;
   --breakpoint-sm: 480px;
@@ -40,7 +42,7 @@
 
 @layer utilities {
   .max-container {
-    @apply w-full max-w-[70rem] p-3 mx-auto;
+    @apply w-full max-w-[75rem] p-3 mx-auto;
   }
   .nav-link {
     @apply text-gray-dark capitalize opacity-[67%] text-sm hover:text-main duration-300 ease-in-out;

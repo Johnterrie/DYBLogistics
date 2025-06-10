@@ -50,7 +50,7 @@ function Navbar() {
             <div className="flex flex-row items-center gap-6">
               <Link
                 className="text-sm text-gray-dark font-semibold"
-                href={"/login"}
+                href={"/customer/dashboard"}
               >
                 Log in
               </Link>
@@ -85,12 +85,18 @@ function Navbar() {
             <div className="">
               {/* blur-background */}
               <div
+                onClick={() => setNavOpen(false)}
                 className={`${
-                  isNavOpen ? "block z-[50]" : "hidden"
-                } duration-300 ease-in-out fixed top-0 left-0 bg-gray-dark opacity-40 h-screen w-screen`}
+                  isNavOpen ? "fixed z-[50] opacity-40" : "hidden opacity-0"
+                } duration-300 ease-in-out top-0 left-0 bg-gray-dark h-screen w-screen`}
               />
               {/* nav-links */}
               <div
+                onClick={() => {
+                  setTimeout(() => {
+                    setNavOpen(false);
+                  }, 500);
+                }}
                 className={`absolute ${
                   isNavOpen
                     ? "right-[-20px] opacity-100 z-[50]"
@@ -120,7 +126,7 @@ function Navbar() {
                 </Link>
                 <Link
                   className="text-sm text-gray-dark font-semibold"
-                  href={"/login"}
+                  href={"/customer/dashboard"}
                 >
                   Log in
                 </Link>

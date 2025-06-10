@@ -41,13 +41,13 @@ function Faq() {
         className="w-full flex flex-col md:flex-row gap-5 mt-12"
       >
         {/* image */}
-        <div className="hidden md:block w-1/2">
+        <div className="hidden h-[525px] rounded-3xl md:block w-1/2">
           <Image
             alt="faq"
             src={"/images/faq.svg"}
-            width={500}
+            width={300}
             height={300}
-            className="w-full h-[500px]"
+            className="w-full h-full object-cover rounded-3xl"
           />
         </div>
 
