@@ -7,11 +7,14 @@ function Navbar() {
   const [isNavOpen, setNavOpen] = useState<boolean>(false);
 
   const pathname = usePathname();
+  const path = pathname === "/signup" ? "/signup" : "/signin";
 
   useEffect(() => {}, []);
   return (
     <>
-      <nav className="w-full p-5">
+      <nav
+        className={`w-full p-5 ${pathname === path ? "lg:px-[116px]" : "p-5"}`}
+      >
         <div className="max-container flex flex-row items-center gap-3">
           {/* logo */}
           <Link href={"/"}>
@@ -32,7 +35,7 @@ function Navbar() {
           </Link>
 
           {/* desktop nav */}
-          {pathname !== "/signup" && (
+          {pathname !== path && (
             <div className="hidden w-3/4 lg:flex flex-row items-center gap-16 ml-auto">
               {/* links */}
               <div className="flex flex-row items-center gap-8">
@@ -74,7 +77,7 @@ function Navbar() {
             </div>
           )}
           {/* mobile nav */}
-          {pathname !== "/signup" && (
+          {pathname !== path && (
             <div className="lg:hidden relative ml-auto">
               {/* menu */}
               <div className="cursor-pointer relative z-[10]">

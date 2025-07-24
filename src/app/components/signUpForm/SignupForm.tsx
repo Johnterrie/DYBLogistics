@@ -87,7 +87,7 @@ const SignupForm = () => {
         console.error("Signup failed", result);
       } else {
         console.log("Signup successful", result);
-        router.push("/");
+        router.push("/customer/dashboard");
       }
     } catch (error) {
       console.error("Error posting signup:", error);
