@@ -1,9 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 function Navbar() {
   const [isNavOpen, setNavOpen] = useState<boolean>(false);
+
+  const pathname = usePathname();
 
   useEffect(() => {}, []);
   return (
@@ -29,89 +32,10 @@ function Navbar() {
           </Link>
 
           {/* desktop nav */}
-          <div className="hidden w-3/4 lg:flex flex-row items-center gap-16 ml-auto">
-            {/* links */}
-            <div className="flex flex-row items-center gap-8">
-              <Link href={"/shipping"} className="nav-link">
-                shipping
-              </Link>
-              <Link href={"/tracking"} className="nav-link">
-                tracking
-              </Link>
-              <Link href={"/resources"} className="nav-link">
-                resources
-              </Link>
-              <Link href={"/contact"} className="nav-link">
-                contact
-              </Link>
-            </div>
-
-            {/* cta-buttons */}
-            <div className="flex flex-row items-center gap-6">
-              <Link
-                className="text-sm text-gray-dark font-semibold"
-                href={"/customer/dashboard"}
-              >
-                Log in
-              </Link>
-              <Link
-                href={"signup"}
-                className="btn-large flex items-center flex-row gap-2"
-              >
-                Sign up{" "}
-                <Image
-                  alt="icon"
-                  src={"/icons/button-icon.svg"}
-                  width={20}
-                  height={20}
-                />
-              </Link>
-            </div>
-          </div>
-          {/* mobile nav */}
-          <div className="lg:hidden relative ml-auto">
-            {/* menu */}
-            <div className="cursor-pointer relative z-[10]">
-              <Image
-                alt="henu"
-                src={"/icons/menu.svg"}
-                width={30}
-                height={30}
-                onClick={() => setNavOpen(true)}
-              />
-            </div>
-
-            {/* mobile nav */}
-            <div className="">
-              {/* blur-background */}
-              <div
-                onClick={() => setNavOpen(false)}
-                className={`${
-                  isNavOpen ? "fixed z-[50] opacity-40" : "hidden opacity-0"
-                } duration-300 ease-in-out top-0 left-0 bg-gray-dark h-screen w-screen`}
-              />
-              {/* nav-links */}
-              <div
-                onClick={() => {
-                  setTimeout(() => {
-                    setNavOpen(false);
-                  }, 500);
-                }}
-                className={`absolute ${
-                  isNavOpen
-                    ? "right-[-20px] opacity-100 z-[50]"
-                    : "right-[-100%] opacity-0"
-                } duration-300 ease-in-out top-[-10px] w-[175px] h-fit bg-background flex flex-col gap-5 p-5`}
-              >
-                <div className="w-full flex items-center">
-                  {" "}
-                  <span
-                    onClick={() => setNavOpen(false)}
-                    className="ml-auto text-gray-dark capitalize opacity-[67%]"
-                  >
-                    close
-                  </span>
-                </div>
+          {pathname !== "/signup" && (
+            <div className="hidden w-3/4 lg:flex flex-row items-center gap-16 ml-auto">
+              {/* links */}
+              <div className="flex flex-row items-center gap-8">
                 <Link href={"/shipping"} className="nav-link">
                   shipping
                 </Link>
@@ -124,6 +48,10 @@ function Navbar() {
                 <Link href={"/contact"} className="nav-link">
                   contact
                 </Link>
+              </div>
+
+              {/* cta-buttons */}
+              <div className="flex flex-row items-center gap-6">
                 <Link
                   className="text-sm text-gray-dark font-semibold"
                   href={"/customer/dashboard"}
@@ -132,19 +60,98 @@ function Navbar() {
                 </Link>
                 <Link
                   href={"signup"}
-                  className="text-main flex flex-row items-center gap-2"
+                  className="btn-large flex items-center flex-row gap-2"
                 >
                   Sign up{" "}
                   <Image
                     alt="icon"
-                    src={"/icons/button-main-icon.svg"}
-                    width={15}
-                    height={15}
+                    src={"/icons/button-icon.svg"}
+                    width={20}
+                    height={20}
                   />
                 </Link>
               </div>
             </div>
-          </div>
+          )}
+          {/* mobile nav */}
+          {pathname !== "/signup" && (
+            <div className="lg:hidden relative ml-auto">
+              {/* menu */}
+              <div className="cursor-pointer relative z-[10]">
+                <Image
+                  alt="henu"
+                  src={"/icons/menu.svg"}
+                  width={30}
+                  height={30}
+                  onClick={() => setNavOpen(true)}
+                />
+              </div>
+
+              {/* mobile nav */}
+              <div className="">
+                {/* blur-background */}
+                <div
+                  onClick={() => setNavOpen(false)}
+                  className={`${
+                    isNavOpen ? "fixed z-[50] opacity-40" : "hidden opacity-0"
+                  } duration-300 ease-in-out top-0 left-0 bg-gray-dark h-screen w-screen`}
+                />
+                {/* nav-links */}
+                <div
+                  onClick={() => {
+                    setTimeout(() => {
+                      setNavOpen(false);
+                    }, 500);
+                  }}
+                  className={`absolute ${
+                    isNavOpen
+                      ? "right-[-20px] opacity-100 z-[50]"
+                      : "right-[-100%] opacity-0"
+                  } duration-300 ease-in-out top-[-10px] w-[175px] h-fit bg-background flex flex-col gap-5 p-5`}
+                >
+                  <div className="w-full flex items-center">
+                    {" "}
+                    <span
+                      onClick={() => setNavOpen(false)}
+                      className="ml-auto text-gray-dark capitalize opacity-[67%]"
+                    >
+                      close
+                    </span>
+                  </div>
+                  <Link href={"/shipping"} className="nav-link">
+                    shipping
+                  </Link>
+                  <Link href={"/tracking"} className="nav-link">
+                    tracking
+                  </Link>
+                  <Link href={"/resources"} className="nav-link">
+                    resources
+                  </Link>
+                  <Link href={"/contact"} className="nav-link">
+                    contact
+                  </Link>
+                  <Link
+                    className="text-sm text-gray-dark font-semibold"
+                    href={"/customer/dashboard"}
+                  >
+                    Log in
+                  </Link>
+                  <Link
+                    href={"signup"}
+                    className="text-main flex flex-row items-center gap-2"
+                  >
+                    Sign up{" "}
+                    <Image
+                      alt="icon"
+                      src={"/icons/button-main-icon.svg"}
+                      width={15}
+                      height={15}
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
     </>
